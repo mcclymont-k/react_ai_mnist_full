@@ -1,0 +1,59 @@
+#can {
+  border: 1px solid black;
+  margin: 20px
+}
+
+.appContainer {
+  display: grid;
+  justify-items: center;
+}
+
+.drawingBox {
+  display: grid;
+  justify-items: center;
+}
+
+.predictionBox {
+  display: grid;
+  justify-items: center
+}
+
+.buttonBox {
+  display: grid;
+  justify-items: center;
+  grid-auto-flow: column;
+}
+
+.clearButton {
+  border: none;
+  color: white;
+  background-color: red;
+  border-radius: 50%;
+  width:40px;
+  height:40px;
+  margin-left: 10px;
+  transition: 0.5s;
+}
+
+.predictButton {
+  color: white;
+  background-color: #25db25;
+  border: none;
+  height: 40px;
+  width: 80px;
+  font-size: 15px;
+  border-radius: 20px;
+  transition: 0.5s
+}
+
+.predictButton:hover {
+  cursor: pointer;
+  background-color: lightgreen;
+  color: black
+}
+
+.clearButton:hover {
+  cursor: pointer;
+  background-color: salmon;
+  color: black
+}
