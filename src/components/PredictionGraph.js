@@ -14,11 +14,11 @@ class PredictionGraph extends Component {
   mainChartRun() {
   const height = 400;
   const width = 400;
-  const barWidth = 40;
+  const barWidth = 10;
   const barOffset = 2;
 
   let xAxisScale = d3.scaleBand()
-    .domain(['3', '7'])
+    .domain(['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'])
     .rangeRound([0,( width - 40)])
   let yAxisScale = d3.scaleLinear()
     .rangeRound([0, (40 - height)])
@@ -46,7 +46,7 @@ class PredictionGraph extends Component {
           .attr('width', barWidth)
           .attr('height', 0)
           .attr('x', function(d, i) {
-            return ((i + 1) * 180) - 70
+            return ((i * 36) + 53)
           })
           .attr('y', function(d) {
             console.log(height * d)

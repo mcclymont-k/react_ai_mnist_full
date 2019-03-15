@@ -80,7 +80,7 @@ class Canvas extends Component {
     let data = new FormData();
     this.canvas.toBlob(blob => {
       data.append('data', blob);
-      axios.post('https://mnist.onrender.com/predict', data, {
+      axios.post('http://localhost:5000/predict', data, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
@@ -123,8 +123,8 @@ class Canvas extends Component {
   render() {
     return (
       <div className='appContainer'>
-        <h2 style={{textAlign: 'center', fontFamily: "'Roboto Slab', serif", fontSize: '40px'}}>MNIST-Sample 7 and 3 Predictor</h2>
-        <h3 style={{textAlign: 'center', width: "40%", fontSize: '15px', marginBottom:'10px'}}>Use the black square to draw either a 3 or a 7. Once you have drawn the number click the predict button to retrieve the predicted charachter and the associated confidence of the prediction.</h3>
+        <h2 style={{textAlign: 'center', fontFamily: "'Roboto Slab', serif", fontSize: '40px'}}>Full MNIST Number Predictor</h2>
+        <h3 style={{textAlign: 'center', width: "40%", fontSize: '15px', marginBottom:'10px'}}>Use the black square to draw a number between 0 & 9. Once you have drawn the number click the predict button to retrieve the predicted charachter and the associated confidence of the prediction. Bigger drawings tend to be more accurate.</h3>
         <div className='drawingBox'>
           <canvas id="can" width="280" height="280"></canvas>
         </div>
