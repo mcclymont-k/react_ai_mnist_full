@@ -80,7 +80,7 @@ class Canvas extends Component {
     let data = new FormData();
     this.canvas.toBlob(blob => {
       data.append('data', blob);
-      axios.post('http://localhost:5000/predict', data, {
+      axios.post('https://flask-mnist-jpeg.onrender.com/predict', data, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
